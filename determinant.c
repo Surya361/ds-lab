@@ -1,10 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-int order;
-printf("enter the oder of the matrix\n");
-scanf("%d",&order);
 
-int *[(sizetype)(order)]  sub(int order,int a[order][order],  int r)
+int (*[(sizetype)(order)]  sub(int order,int a[order][order],  int r)
 {
 	int b[order-1][order-1];
 	int i,j,p,q;
@@ -40,7 +37,9 @@ int determinant(int order,int a[order][order] )
 }
 void main()
 {
-	int i,j;
+	int order,i,j;
+	printf("enter the oder of the matrix\n");
+	scanf("%d",&order);
 	int m[order][order];
 	printf("enter the values");
 	for(i=0;i<order;i++)

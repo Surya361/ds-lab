@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int** make(int ver,int edg);
+{
+	int **adj;
+	adj = malloc(ver*sizeof(int *));
+	for(i=0;i<ver;i++)
+	{
+		*(adj + i) = maloc(ver*sizeof(int));
+	}
+	while(edg)
+	{
+		int one = read(p);
+		int two = read(p);
+		*(*(adj + one)+two) = 1;
+		*(*(adj + two)+one) = 1;
+		--edg;
+	}
+	return adj;
+	
+}
+void bfs(int **a)
+{
+	
+}
+void main()
+{
+	char *a;
+	a = malloc(30*sizeof(char));
+	printf("enter the file name: ");
+	scanf("%s",a);
+	FILE *p;
+	p = fopen(a,"r+");
+	int ver = read(p);
+	int ed = read(p);
+	int **a;
+	a = makegraph(ver,ed);
+	bfs(a);
+}
